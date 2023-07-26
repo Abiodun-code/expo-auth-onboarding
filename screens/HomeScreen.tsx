@@ -1,9 +1,12 @@
 import React from "react"
-import { View } from "react-native"
+import { View, Text } from "react-native"
+import { authentification } from "../constant/firebaseConfig"
 
 const HomeScreen = () => {
   return (
-    <View></View>
+    <View>
+      <Text>{authentification.currentUser?.email}</Text>
+    </View>
   )
 }
 

@@ -24,7 +24,7 @@ const OnboardingScreen = ({ navigation }: OnboardingStack) => {
         bottomBarHighlight = {false}
         pages={[
           {
-            backgroundColor: '#7978b5',
+            backgroundColor: '#fff',
             image: (
               <View style={{width: width, height: height*0.6}}>
                 <LottieView source={require('../assets/animations/second.json')} autoPlay loop />
@@ -34,7 +34,7 @@ const OnboardingScreen = ({ navigation }: OnboardingStack) => {
             subtitle: 'Discover new features and functionalities.',
           },
           {
-            backgroundColor: '#7978b5',
+            backgroundColor: '#fff',
             image: (
               <View style={{ width: width, height: height * 0.6 }}>
                 <LottieView source={require('../assets/animations/first.json')} autoPlay loop />
@@ -45,7 +45,7 @@ const OnboardingScreen = ({ navigation }: OnboardingStack) => {
           },
         ]}
       />
-      <StatusBar style={"light"} />
+      <StatusBar style={"auto"} />
     </SafeAreaView>
   )
 }
