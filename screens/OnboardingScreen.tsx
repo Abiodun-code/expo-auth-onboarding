@@ -19,12 +19,12 @@ const OnboardingScreen = ({ navigation }: OnboardingStack) => {
   return (
     <SafeAreaView className="flex-1">
       <Onboarding
-        onDone={()=> navigation.navigate("Home")}
-        onSkip={()=> navigation.navigate("Home")}
+        onDone={()=> navigation.navigate("Login")}
+        onSkip={()=> navigation.navigate("Login")}
         bottomBarHighlight = {false}
         pages={[
           {
-            backgroundColor: '#fff',
+            backgroundColor: '#7978b5',
             image: (
               <View style={{width: width, height: height*0.6}}>
                 <LottieView source={require('../assets/animations/second.json')} autoPlay loop />
@@ -34,7 +34,7 @@ const OnboardingScreen = ({ navigation }: OnboardingStack) => {
             subtitle: 'Discover new features and functionalities.',
           },
           {
-            backgroundColor: '#fff',
+            backgroundColor: '#7978b5',
             image: (
               <View style={{ width: width, height: height * 0.6 }}>
                 <LottieView source={require('../assets/animations/first.json')} autoPlay loop />
@@ -45,7 +45,7 @@ const OnboardingScreen = ({ navigation }: OnboardingStack) => {
           },
         ]}
       />
-      <StatusBar style={"auto"} />
+      <StatusBar style={"light"} />
     </SafeAreaView>
   )
 }

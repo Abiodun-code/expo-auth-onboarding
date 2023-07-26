@@ -1,5 +1,8 @@
-export interface borderValue {
-
+export interface loginValue {
+  email: string,
+  setEmail: React.Dispatch<React.SetStateAction<string>>
+  password: string,
+  setPassword: React.Dispatch<React.SetStateAction<string>>
 }
 
 export interface childProp {

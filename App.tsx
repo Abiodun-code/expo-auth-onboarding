@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import AppNavigation from './navigation/appNavigation';
-import BorderContext from './context/boardContext';
+import BorderContext from './context/loginContext';
+import LoginContext from './context/loginContext';
 
 const App = ()=> {
   return (
@@ -8,4 +9,10 @@ const App = ()=> {
   );
 }
 
-export default App
+export default ()=>{
+  return(
+    <LoginContext>
+      <App/>
+    </LoginContext>
+  )
+}
