@@ -17,7 +17,7 @@ const OnboardingScreen = ({ navigation }: OnboardingStack) => {
   },[])
 
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1 ">
       <Onboarding
         onDone={()=> navigation.navigate("Login")}
         onSkip={()=> navigation.navigate("Login")}
@@ -45,7 +45,7 @@ const OnboardingScreen = ({ navigation }: OnboardingStack) => {
           },
         ]}
       />
-      <StatusBar style={"auto"} />
+      <StatusBar style={"dark"} />
     </SafeAreaView>
   )
 }

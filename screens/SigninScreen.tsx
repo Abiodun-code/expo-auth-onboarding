@@ -3,7 +3,6 @@ import { SafeAreaView, View, Text, ScrollView, TextInput, TouchableOpacity, Dime
 import { Colors, styles } from "../constant/Styles"
 import { StatusBar } from "expo-status-bar"
 import { SigninStack } from "../types/stackParam"
-import LoginInput from "../components/loginInput"
 import LottieView from "lottie-react-native";
 import SigninInput from "../components/signinInput"
 
@@ -31,7 +30,7 @@ const SigninScreen = ({ navigation, route }: SigninStack) => {
         </SafeAreaView>
         <SigninInput navigation={navigation} route={route} />
       </ScrollView>
-      <StatusBar style={"auto"} />
+      <StatusBar style={"dark"} />
     </View>
   )
 }

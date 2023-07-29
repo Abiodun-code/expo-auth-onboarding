@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
+    "@react-native-community/google-signin": "^5.0.0",
     "@react-native-google-signin/google-signin": "^10.0.1",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
@@ -25,7 +26,13 @@
     "react-native-onboarding-swiper": "^1.2.0",
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "expo-auth-session": "~4.0.3",
+    "expo-crypto": "~12.2.1",
+    "expo-web-browser": "~12.1.1",
+    "expo-application": "~5.1.1",
+    "expo-dev-client": "~2.2.1",
+    "@react-native-async-storage/async-storage": "1.17.11"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

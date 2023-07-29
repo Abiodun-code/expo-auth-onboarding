@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import { SafeAreaView, View, Text, ScrollView, TextInput, TouchableOpacity, Dimensions } from "react-native"
 import { Colors, styles } from "../constant/Styles"
 import { StatusBar } from "expo-status-bar"
@@ -23,14 +23,14 @@ const LoginScreen = ({navigation, route}: LoginStack) => {
       >
         {/* Title and Description */}
         <SafeAreaView style={styles.SafeArea} className="space-y-2 mx-4">
-          <View style={{ width: width, height: height * 0.2 }} className="">
+          <View style={{ width: width, height: height * 0.2 }}>
             <LottieView source={require('../assets/animations/login.json')} autoPlay loop />
           </View>
           <Text style={{ color: Colors.black }} className="text-lg font-medium">Enter Your Login Details</Text>
         </SafeAreaView>
         <LoginInput navigation={navigation} route={route}/>
       </ScrollView>
-      <StatusBar style={"auto"}/>
+      <StatusBar style={"dark"}/>
     </View>
   )
 }

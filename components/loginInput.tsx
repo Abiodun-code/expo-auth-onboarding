@@ -12,30 +12,7 @@ const { width, height } = Dimensions.get("window")
 
 const LoginInput = ({ navigation, route }: LoginStack) => {
 
-  const { setPassword, password, email, setEmail } = useContext(LoginProvider)
-
-  const handleLoginIn = () => {
-    signInWithEmailAndPassword(authentification, email, password)
-      .then((userCredientials: { user: any }) => {
-        const user = userCredientials.user;
-        if (user) {
-          navigation.navigate("Home")
-        }
-        setEmail("")
-        setPassword("")
-      })
-      .catch((error: { message: any }) => alert(error.message))
-  }
-
-  // useEffect(() => {
-  //   authentification.onAuthStateChanged(user => {
-  //     if (!user) {
-  //       navigation.navigate("Login")
-  //     }else{
-  //       navigation.navigate("Home")
-  //     }
-  //   })
-  // })
+  const { setPassword, password, email, setEmail, handleLoginIn, googleSignUp } = useContext(LoginProvider)
   
   return (
     <View className="flex-col mx-4">
@@ -80,7 +57,11 @@ const LoginInput = ({ navigation, route }: LoginStack) => {
       {/* google design */}
       <View className="mt-5">
         <Text className="text-sm text-center" style={{ color: Colors.darkBlue }}>Or login with</Text>
-        <TouchableOpacity activeOpacity={0.9} className="items-center border flex-row justify-center py-2 mt-3" style={{ width: width * 0.9, height: height * 0.09, borderColor: Colors.grey, backgroundColor: Colors.light }}>
+        <TouchableOpacity activeOpacity={0.9}
+          className="items-center border flex-row justify-center py-2 mt-3"
+          onPress={() => googleSignUp()}
+          style={{ width: width * 0.9, height: height * 0.09, borderColor: Colors.grey, backgroundColor: Colors.light }}
+        >
           <LottieView source={require('../assets/animations/google.json')} autoPlay loop />
         </TouchableOpacity>
         <View className="flex-row items-center justify-center mt-3 space-x-2">

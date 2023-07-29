@@ -12,20 +12,7 @@ const { width, height } = Dimensions.get("window")
 
 const SigninInput = ({ navigation, route }: SigninStack) => {
 
-  const { setPassword, password, email, setEmail } = useContext(SigninProvider)
-
-  const handleSignIn = () => {
-    createUserWithEmailAndPassword(authentification, email, password)
-      .then((userCredientials: { user: any }) => {
-        const user = userCredientials.user;
-        if (user) {
-          navigation.navigate("Login")
-        }
-        setEmail("")
-        setPassword("")
-      })
-      .catch((error: { message: any }) => alert(error.message))
-  }
+  const { setPassword, password, email, setEmail, handleSignIn} = useContext(SigninProvider)
   
   return (
     <View className="flex-col mx-4">
