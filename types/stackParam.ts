@@ -7,6 +7,7 @@ export type RootStack = {
   Signin: undefined
 }
 
+
 export type HomeStack = NativeStackScreenProps<RootStack, "Home">
 
 export type OnboardingStack = NativeStackScreenProps<RootStack, "Onboarding">
